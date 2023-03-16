@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use('/api/autos', require('./routes/autosRoutes'))
+app.use('/api/user', require('./routes/usersRoutes'))
 app.use(errorHandle)
 
 app.listen(port, ( ) => console.log(`El servidor esta escuchando en el puerto: ${port}`.blue))
